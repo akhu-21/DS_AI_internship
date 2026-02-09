@@ -1,31 +1,31 @@
-# # simple calculator
-# num1=int(input("Enter num1: "))
-# num2=int(input("Enter num2: "))
-# operation = input("Enter operation (+, -, *, /, **, %): ")
-# if operation == "+":
-#     result = num1 + num2
-# elif operation == "-":
-#     result = num1 - num2
-# elif operation == "*":
-#     result = num1 * num2
+# simple calculator
+num1=int(input("Enter num1: "))
+num2=int(input("Enter num2: "))
+operation = input("Enter operation (+, -, *, /, **, %): ")
+if operation == "+":
+    result = num1 + num2
+elif operation == "-":
+    result = num1 - num2
+elif operation == "*":
+    result = num1 * num2
 
-# elif operation == "/":
-#     result = num1 / num2
-# elif operation == "**":
-#     result = num1 ** num2
-# elif operation == "%":
-#     result = num1 % num2
-# print("Result:", result)
-# # f string.
-# name = "akhil"
-# msg = "good morning"
-# print(f"hello {msg}  everyone ,myself {name}")
-# name = "akhil"
-# age = 20
-# is_student = True
-# print(type(name))
-# print(type(age))
-# print(type(is_student))
+elif operation == "/":
+    result = num1 / num2
+elif operation == "**":
+    result = num1 ** num2
+elif operation == "%":
+    result = num1 % num2
+print("Result:", result)
+# f string.
+name = "akhil"
+msg = "good morning"
+print(f"hello {msg}  everyone ,myself {name}")
+name = "akhil"
+age = 20
+is_student = True
+print(type(name))
+print(type(age))
+print(type(is_student))
 
 
 
