@@ -6,6 +6,5 @@ CustomerID,Name,Product,City,OrderAmount,PaymentMethod,Date
 105,sharath,Digital Camera,Bangalore,3000.0,,2024-03-01
 106,avinash,Bluetooth Headphones,Chennai,,UPI,2024-03-05
 107,sudarshna,Smart Watch,Mumbai,1500.0,Cash,2024-03-10
-107,akhil,LED TV,Mumbai,1500.0,Cash,2024-03-10
 108,Ali,Remote Control Car,Delhi,2700.0,Card,2024-04-01
 109,Riya,Drone Toy,Bangalore,,UPI,2024-04-05

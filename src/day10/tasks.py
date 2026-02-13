@@ -16,6 +16,42 @@ print("removed_duplicates:",removed_duplicates)
 print(f'shape of the DataFrame after cleaning : {removed_duplicates.shape}')
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 print("Task 2: The Type Fixer (Data Type Conversion)")
 purchases = {
     "Price" : ["$120.50","$89.99","$250.00","$45.75","$120.50"],
@@ -32,16 +68,41 @@ print(df['Date'],"\n")
 print(df)
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 print("Task 3: The Categorical Standardizer (String Cleaning)")
 details = {
-    "Location": [" New York", "new york", "NEW YORK ", "Chicago", " chicago "],
-    "Sales": [100, 150, 200, 120, 130]
+    "Location": ["new York", "new york",  "new york","chicago", "chicago","CHICAGO"],
+    "Sales": [100, 150, 200, 120,300,400]
 }
 df= pd.DataFrame(details)
 location = df['Location']
 print(location.str.strip())
 print(location.str.lower())
-print(location.unique)
+
+data = {
+    "Location": [" New York", "new york", "NEW YORK ", "New York"]
+}
+
+df = pd.DataFrame(data)
+
+print("Before normalization:", df["Location"].unique())
+print("After normalization:", df["Location"].unique())
+
+
+
+ 
 
 
 
@@ -51,14 +112,7 @@ print(location.unique)
 
 
 
-
-
-
-
-
-
-
-
+ 
 
 
 
