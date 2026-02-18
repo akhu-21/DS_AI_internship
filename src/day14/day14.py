@@ -1,9 +1,9 @@
 # ==========================================================
-# DAY 12 — FEATURE ENGINEERING COMPLETE SCRIPT
+# DAY 14 â€” FEATURE ENGINEERING COMPLETE SCRIPT
 # ==========================================================
 
 # ----------------------------------------------------------
-# STEP 1 — Import Libraries
+# STEP 1 â€” Import Libraries
 # ----------------------------------------------------------
 import pandas as pd
 import numpy as np
@@ -14,7 +14,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.metrics import r2_score
 
 # ----------------------------------------------------------
-# STEP 2 — Create Dataset (Salary Prediction Example)
+# STEP 2 â€” Create Dataset (Salary Prediction Example)
 # ----------------------------------------------------------
 # In real projects: df = pd.read_csv("dataset.csv")
 
@@ -30,7 +30,7 @@ data = {
 df = pd.DataFrame(data)
 
 # ----------------------------------------------------------
-# TOPIC 1 — Inspect Dataset & Identify Feature Types
+# TOPIC 1 â€” Inspect Dataset & Identify Feature Types
 # ----------------------------------------------------------
 print("\nDataset Info:")
 print(df.info())
@@ -43,13 +43,13 @@ numerical_cols = ["Age", "Experience"]
 categorical_cols = ["Education_Level", "Department"]
 
 # ----------------------------------------------------------
-# TOPIC 2 — ENCODING CATEGORICAL VARIABLES
+# TOPIC 2 â€” ENCODING CATEGORICAL VARIABLES
 # ----------------------------------------------------------
-# Label Encoding → for ORDINAL categories (Education Level has order)
+# Label Encoding â†’ for ORDINAL categories (Education Level has order)
 le = LabelEncoder()
 df["Education_Level_Encoded"] = le.fit_transform(df["Education_Level"])
 
-# One-Hot Encoding → for NOMINAL categories (Department has no order)
+# One-Hot Encoding â†’ for NOMINAL categories (Department has no order)
 df = pd.get_dummies(df, columns=["Department"], drop_first=True)
 
 # Drop original categorical column after encoding
@@ -75,10 +75,10 @@ model.fit(X_train, y_train)
 baseline_preds = model.predict(X_test)
 
 baseline_score = r2_score(y_test, baseline_preds)
-print("\nBaseline Model R² Score:", baseline_score)
+print("\nBaseline Model RÂ² Score:", baseline_score)
 
 # ----------------------------------------------------------
-# TOPIC 3 — FEATURE SCALING
+# TOPIC 3 â€” FEATURE SCALING
 # ----------------------------------------------------------
 # Standard Scaling (mean=0, std=1)
 scaler = StandardScaler()
@@ -95,7 +95,7 @@ scaled_score = r2_score(y_test, scaled_preds)
 print("Model Score After Scaling:", scaled_score)
 
 # ----------------------------------------------------------
-# TOPIC 4 — POLYNOMIAL FEATURES (Non-linear relationships)
+# TOPIC 4 â€” POLYNOMIAL FEATURES (Non-linear relationships)
 # ----------------------------------------------------------
 poly = PolynomialFeatures(degree=2, include_bias=False)
 
@@ -245,8 +245,8 @@ poly_model.fit(X_train_poly, y_train)
 y_pred_poly = poly_model.predict(X_test_poly)
 r2_poly = r2_score(y_test, y_pred_poly)
 
-print("R� Score (Linear Regression - Original Feature):", r2_linear)
-print("R� Score (Linear Regression - Polynomial Features):", r2_poly)
+print("R² Score (Linear Regression - Original Feature):", r2_linear)
+print("R² Score (Linear Regression - Polynomial Features):", r2_poly)
 
 
 
