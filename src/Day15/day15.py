@@ -1,4 +1,4 @@
- 
+  
 import random
 random.seed(1)
 
@@ -72,6 +72,8 @@ print(f'\nP(free) : {free}\n')
 
 spam_free = (free_spam * spam) / free
 print(f'\nemail with the word  "Free", probability it is actually Spam  : {spam_free:.2f}\n')
+
+
 
 
 
