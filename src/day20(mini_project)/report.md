@@ -229,6 +229,6 @@ This EDA provides a solid foundation for understanding customer analytics. The s
 
 ---
 **Report Generated**: February 25, 2026  
-**Analysis Performed By**: AI Assistant  
+**Analysis Performed By**: M P Akhil Kumar 
 **Dataset Version**: customer_analytics.csv  
 **Code Repository**: MiniProject1_EDA.ipynb
